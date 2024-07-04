@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oskar Thun - CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .job {
+            margin-bottom: 15px;
+        }
+        .job-title {
+            font-weight: bold;
+        }
+        .job-company {
+            font-style: italic;
+        }
+        .job-date {
+            color: #7f8c8d;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill {
+            background-color: #ecf0f1;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .summary {
+            background-color: #f0f8ff;
+            border-left: 4px solid #3498db;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        #language-selector button, #download-button {
+            margin-right: 10px;
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #language-selector button:hover, #download-button:hover {
+            background-color: #2980b9;
+        }
+        @media print {
+            #top-bar {
+                display: none;
+            }
+        }
+        /* Hide all language-specific elements by default */
+        [class^="lang-"] {
+            display: none;
+        }
+        /* Show Finnish language elements by default */
+        .lang-fi {
+            display: block;
+        }
+        /* For inline elements like skills */
+        span.lang-en {
+            display: none;
+        }
+        span.lang-sv {
+            display: none;
+        }
+        span.lang-fi {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="top-bar">
+        <div id="language-selector">
+            <button onclick="changeLanguage('fi')">Suomi</button>
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('sv')">Svenska</button>
+        </div>
+        <button id="download-button" onclick="downloadCV()">Download / Lataa / Ladda ner</button>
+    </div>
+
+    <header>
+        <h1>Oskar Thun</h1>
+        <p class="lang-fi">Santakuja 3 F 91, 00180 Helsinki | Puh. 040 1688 242 | S-posti: oskar.thun@gmail.com</p>
+        <p class="lang-en">Santakuja 3 F 91, 00180 Helsinki | Tel. 040 1688 242 | E-mail: oskar.thun@gmail.com</p>
+        <p class="lang-sv">Sandgränd 3 F 91, 00180 Helsingfors | Tel. 040 1688 242 | E-post: oskar.thun@gmail.com</p>
+        <p class="lang-fi">Syntymäaika ja -paikka: 10.3.1986 Korppoo</p>
+        <p class="lang-en">Date and place of birth: 10.3.1986 Korpo</p>
+        <p class="lang-sv">Födelsedatum och -ort: 10.3.1986 Korpo</p>
+    </header>
+
+
+
+    <section class="summary">
+        <h2 class="lang-fi">Ammatillinen yhteenveto</h2>
+        <h2 class="lang-en">Professional Summary</h2>
+        <h2 class="lang-sv">Professionell sammanfattning</h2>
+        <p class="lang-fi">Monipuolinen IT-tukiasiantuntija usean vuoden kokemuksella. Erikoistunut laaja-alaiseen IT-tukeen, sisältäen laitteisto- ja ohjelmisto-ongelmanratkaisun, järjestelmäpäivitykset ja verkkotuen. Vahva tausta asiakaspalvelussa ja kyky kommunikoida teknisiä asioita selkeästi. Osoittanut kustannustehokkuutta ja innovatiivista ongelmanratkaisua, kuten säästämällä laboratoriolle yli 10 000 euroa laitehankinnoissa Windows-päivityksen yhteydessä.</p>
+        <p class="lang-en">Versatile IT support specialist with several years of experience. Specialized in comprehensive IT support, including hardware and software troubleshooting, system updates, and network support. Strong background in customer service and ability to communicate technical issues clearly. Demonstrated cost-effectiveness and innovative problem-solving, such as saving a laboratory over 10,000 euros in equipment purchases during a Windows update.</p>
+        <p class="lang-sv">Mångsidig IT-supportspecialist med flera års erfarenhet. Specialiserad på omfattande IT-support, inklusive felsökning av hårdvara och mjukvara, systemuppdateringar och nätverkssupport. Stark bakgrund inom kundservice och förmåga att kommunicera tekniska frågor tydligt. Har visat kostnadseffektivitet och innovativ problemlösning, som att spara ett laboratorium över 10 000 euro i utrustningsinköp under en Windows-uppdatering.</p>
+    </section>
+
+    <section class="section">
+        <h2 class="lang-fi">Työkokemus</h2>
+        <h2 class="lang-en">Work Experience</h2>
+        <h2 class="lang-sv">Arbetslivserfarenhet</h2>
+        <div class="job">
+            <p><span class="job-title">Asiantuntija / Specialist / Specialist</span> - <span class="job-company">Barona IT</span></p>
+            <p class="job-date">01/2020 - 08/2020</p>
+            <p class="lang-fi">InfoCare/HUS Windows 10 päivitysprojekti</p>
+            <p class="lang-en">InfoCare/HUS Windows 10 update project</p>
+            <p class="lang-sv">InfoCare/HUS Windows 10 uppdateringsprojekt</p>
+            <ul>
+                <li class="lang-fi">Osallistuin osana teknikkotiimiä laajaan Windows 10 -päivitysprojektiin sairaalaympäristössä</li>
+                <li class="lang-fi">Säästin laboratoriolle yli 10 000 euroa tunnistamalla yhteensopivuusongelman ja löytämällä ratkaisun ilman kalliita laitehankintoja</li>
+                <li class="lang-en">Participated as part of a technician team in a large-scale Windows 10 update project in a hospital environment</li>
+                <li class="lang-en">Saved the laboratory over 10,000 euros by identifying a compatibility issue and finding a solution without expensive equipment purchases</li>
+                <li class="lang-sv">Deltog som en del av ett teknikerteam i ett storskaligt Windows 10-uppdateringsprojekt i sjukhusmiljö</li>
+                <li class="lang-sv">Sparade laboratoriet över 10 000 euro genom att identifiera ett kompatibilitetsproblem och hitta en lösning utan dyra utrustningsinköp</li>
+            </ul>
+        </div>
+        <!-- Add other job experiences here with translations -->
+    </section>
+
+    <section class="section">
+        <h2 class="lang-fi">IT-taidot</h2>
+        <h2 class="lang-en">IT Skills</h2>
+        <h2 class="lang-sv">IT-färdigheter</h2>
+        <div class="skills-list">
+            <span class="skill lang-fi">Laitteistotuki</span>
+            <span class="skill lang-en">Hardware support</span>
+            <span class="skill lang-sv">Hårdvarusupport</span>
+
+            <span class="skill lang-fi">Ohjelmistotuki</span>
+            <span class="skill lang-en">Software support</span>
+            <span class="skill lang-sv">Mjukvarusupport</span>
+
+            <span class="skill">Windows 10/11</span>
+            <span class="skill">macOS</span>
+            <span class="skill">Linux</span>
+
+            <span class="skill lang-fi">Verkkotuki</span>
+            <span class="skill lang-en">Network support</span>
+            <span class="skill lang-sv">Nätverkssupport</span>
+
+            <span class="skill lang-fi">Pilvipalvelut (Azure, AWS)</span>
+            <span class="skill lang-en">Cloud services (Azure, AWS)</span>
+            <span class="skill lang-sv">Molntjänster (Azure, AWS)</span>
+
+            <span class="skill lang-fi">Kyberturvallisuus</span>
+            <span class="skill lang-en">Cybersecurity</span>
+            <span class="skill lang-sv">Cybersäkerhet</span>
+
+            <span class="skill lang-fi">Virtualisointi</span>
+            <span class="skill lang-en">Virtualization</span>
+            <span class="skill lang-sv">Virtualisering</span>
+
+            <span class="skill">Active Directory</span>
+
+            <span class="skill lang-fi">ITIL-käytännöt</span>
+            <span class="skill lang-en">ITIL practices</span>
+            <span class="skill lang-sv">ITIL-praxis</span>
+
+            <span class="skill lang-fi">Etätukityökalut</span>
+            <span class="skill lang-en">Remote support tools</span>
+            <span class="skill lang-sv">Fjärrsupportverktyg</span>
+
+            <span class="skill lang-fi">Mobiililaitetuki</span>
+            <span class="skill lang-en">Mobile device support</span>
+            <span class="skill lang-sv">Mobil enhetssupport</span>
+
+            <span class="skill lang-fi">Tietokannat</span>
+            <span class="skill lang-en">Databases</span>
+            <span class="skill lang-sv">Databaser</span>
+
+            <span class="skill lang-fi">Varmuuskopiointi ja palautus</span>
+            <span class="skill lang-en">Backup and recovery</span>
+            <span class="skill lang-sv">Säkerhetskopiering och återställning</span>
+
+            <span class="skill lang-fi">VoIP-järjestelmät</span>
+            <span class="skill lang-en">VoIP systems</span>
+            <span class="skill lang-sv">VoIP-system</span>
+
+            <span class="skill lang-fi">Järjestelmäintegraatiot</span>
+            <span class="skill lang-en">System integrations</span>
+            <span class="skill lang-sv">Systemintegrationer</span>
+
+            <span class="skill lang-fi">PowerShell-skriptaus</span>
+            <span class="skill lang-en">PowerShell scripting</span>
+            <span class="skill lang-sv">PowerShell-skriptning</span>
+
+            <span class="skill lang-fi">Tietojärjestelmien valvonta</span>
+            <span class="skill lang-en">IT systems monitoring</span>
+            <span class="skill lang-sv">Övervakning av IT-system</span>
+
+            <span class="skill lang-fi">Käyttäjäkoulutus</span>
+            <span class="skill lang-en">User training</span>
+            <span class="skill lang-sv">Användarutbildning</span>
+        </div>
+    </section>
+
+    <script>
+        function changeLanguage(lang) {
+            document.querySelectorAll('[class^="lang-"]').forEach(el => {
+                el.style.display = 'none';
+            });
+            document.querySelectorAll('.lang-' + lang).forEach(el => {
+                if (el.tagName.toLowerCase() === 'span') {
+                    el.style.display = 'inline-block';
+                } else {
+                    el.style.display = 'block';
+                }
+            });
+            document.documentElement.lang = lang;
+        }
+
+        function downloadCV() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'CV - Oskar Thun.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Set initial language
+        changeLanguage('fi');
+    </script>
+</body>
+</html>
